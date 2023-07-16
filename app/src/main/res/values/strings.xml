@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ClickSpeedTest</string>
+    <string name="text_clicc">Clicc</string>
+    <string name="text_touch_to_play">Touch to play</string>
+</resources>
