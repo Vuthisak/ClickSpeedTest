@@ -17,4 +17,8 @@
     <string name="text_30s_format">30S: %d</string>
     <string name="text_60s_format">60S: %d</string>
     <string name="text_last_5_average_cps">Last 5 Average CPS</string>
+    <string name="text_go">GO!</string>
+    <string name="text_current_cps">Current CPS</string>
+    <string name="text_time_left">TIME LEFT</string>
+    <string name="text_zero">0</string>
 </resources>
