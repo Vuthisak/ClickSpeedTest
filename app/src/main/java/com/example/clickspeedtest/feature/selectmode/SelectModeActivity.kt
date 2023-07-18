@@ -22,7 +22,9 @@ class SelectModeActivity : BaseActivity<ActivitySelecteModeBinding>(),
         setListener()
     }
 
-    override fun onItemClicked(selectMode: SelectMode) = gotoMainScreen()
+    override fun onItemClicked(selectMode: SelectMode) {
+        gotoMainScreen()
+    }
 
     private fun gotoMainScreen() {
         val intent = Intent(this, MainActivity::class.java)
