@@ -49,4 +49,6 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
 
     implementation("io.insert-koin:koin-android:3.4.2")
+    implementation(project(":network"))
+
 }
