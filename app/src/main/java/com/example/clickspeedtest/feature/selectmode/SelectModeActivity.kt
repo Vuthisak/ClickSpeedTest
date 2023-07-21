@@ -23,12 +23,7 @@ class SelectModeActivity : BaseActivity<ActivitySelecteModeBinding>(),
     }
 
     override fun onItemClicked(selectMode: SelectMode) {
-        gotoMainScreen()
-    }
-
-    private fun gotoMainScreen() {
-        val intent = Intent(this, MainActivity::class.java)
-        startActivity(intent)
+        MainActivity.start(this, selectMode.mode.rawValue)
     }
 
     private fun setupContent() {
