@@ -99,18 +99,18 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/viewDivider" />
 
-    <TextView
-        android:id="@+id/txtLast5AverageCps"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_32"
-        android:text="@string/text_last_5_average_cps"
-        android:textAllCaps="true"
-        android:textSize="@dimen/sp_24"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/viewDivider" />
+<!--    <TextView-->
+    <!--        android:id="@+id/txtLast5AverageCps"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="@dimen/dp_32"-->
+    <!--        android:text="@string/text_last_5_average_cps"-->
+    <!--        android:textAllCaps="true"-->
+    <!--        android:textSize="@dimen/sp_24"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@id/viewDivider" />-->
 
     <ImageView
         android:id="@+id/imgBack"
