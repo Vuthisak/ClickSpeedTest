@@ -3,6 +3,7 @@ package com.example.clickspeedtest.feature.start
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import androidx.appcompat.app.AppCompatDelegate
 import com.example.clickspeedtest.base.BaseActivity
 import com.example.clickspeedtest.databinding.ActivityStartBinding
 import com.example.clickspeedtest.feature.highscore.HighScoreActivity
@@ -14,7 +15,7 @@ class StartActivity : BaseActivity<ActivityStartBinding>() {
         binding = ActivityStartBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         checkIfOnDarkMode {
-            Log.d("@@@", "Currently is dark mode")
+            AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         }
         setListener()
     }

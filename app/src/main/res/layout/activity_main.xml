@@ -27,6 +27,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progressTimeLeft"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_8"
+        android:progress="0"
+        app:layout_constraintBottom_toTopOf="@id/txtTimeLeftLabel"
+        app:layout_constraintEnd_toEndOf="@id/txtTimeLeftLabel"
+        app:layout_constraintStart_toStartOf="@id/txtTimeLeftLabel" />
+
     <TextView
         android:id="@+id/txtTimeLeftLabel"
         android:layout_width="wrap_content"

@@ -26,7 +26,7 @@
         android:layout_height="@dimen/dp_160"
         android:layout_marginTop="@dimen/dp_16"
         android:background="@color/title_color"
-        app:layout_constraintBottom_toTopOf="@id/txtLast5AverageCps"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@id/txtHighscores"
         app:layout_constraintStart_toStartOf="@id/txtHighscores"
         app:layout_constraintTop_toBottomOf="@id/txtHighscores" />
@@ -99,7 +99,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/viewDivider" />
 
-<!--    <TextView-->
+    <!--    <TextView-->
     <!--        android:id="@+id/txtLast5AverageCps"-->
     <!--        android:layout_width="wrap_content"-->
     <!--        android:layout_height="wrap_content"-->
