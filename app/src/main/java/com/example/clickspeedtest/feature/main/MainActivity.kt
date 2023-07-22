@@ -36,7 +36,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
     private fun setupContent() {
         mode = intent.extras?.getInt(MODE) ?: 0
         millis = SelectModeType.getMillisecond(mode)
-        Log.d("@@@", millis.toString())
         binding.progressTimeLeft.max = millis.toInt()
     }
 
