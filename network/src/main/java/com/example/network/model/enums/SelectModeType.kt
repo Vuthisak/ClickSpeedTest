@@ -18,7 +18,7 @@ enum class SelectModeType(val rawValue: Int) {
                 THREE_SEC.rawValue -> 3000L
                 FIVE_SEC.rawValue -> 5000L
                 TEN_SEC.rawValue -> 10000L
-                THIRTY_SEC.rawValue -> 30000
+                THIRTY_SEC.rawValue -> 30000L
                 SIXTY_SEC.rawValue -> 60000L
                 else -> 0L
             }

@@ -15,7 +15,6 @@ import com.example.network.model.enums.SelectModeType
 import java.util.Timer
 import java.util.TimerTask
 
-
 class MainActivity : BaseActivity<ActivityMainBinding>() {
     private var clickCount = 0
     private var millis: Long = 0L
@@ -43,41 +42,32 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 
     @SuppressLint("ClickableViewAccessibility")
     private fun setListener() = with(binding) {
-        root.setOnClickListener {
-            startTime(millis.toInt())
-            handleClick()
-        }
-        root.setOnTouchListener { v, event ->
+        root.setOnTouchListener { _, event ->
             val action = event.actionMasked
             val pointerCount = event.pointerCount
             when (action) {
                 MotionEvent.ACTION_DOWN, MotionEvent.ACTION_POINTER_DOWN -> {
                     startTime(millis.toInt())
                     clickCount += pointerCount
-                    binding.txtCurrentPoint.setText(clickCount.toString())
+                    binding.txtCurrentPoint.text = clickCount.toString()
+                    clickCountTemp++
+                    handler.removeCallbacksAndMessages(null)
+                    handler.postDelayed(object : Runnable {
+                        override fun run() {
+                            if (clickCount > 0) {
+                                val clicksPerSecond: Long = 1000 / speed * clickCountTemp
+                                binding.txtCurrentCps.text = "$clicksPerSecond"
+                                clickCountTemp = 0
+                            } else {
+                                speed += 100 // increase delay time by 100ms
+                            }
+                            handler.postDelayed(this, speed)
+                        }
+                    }, speed)
                 }
             }
             true
         }
-    }
-
-    private fun handleClick() = with(binding) {
-        clickCount++
-        clickCountTemp++
-        txtCurrentPoint.run { post { text = clickCount.toString() } }
-        handler.removeCallbacksAndMessages(null)
-        handler.postDelayed(object : Runnable {
-            override fun run() {
-                if (clickCount > 0) {
-                    val clicksPerSecond: Long = 1000 / speed * clickCountTemp
-                    binding.txtCurrentCps.text = "$clicksPerSecond"
-                    clickCountTemp = 0
-                } else {
-                    speed += 100 // increase delay time by 100ms
-                }
-                handler.postDelayed(this, speed)
-            }
-        }, speed)
     }
 
     private fun startTime(millisInInt: Int) {
