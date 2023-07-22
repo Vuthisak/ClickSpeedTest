@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="text_level_1">Beginner</string>
+    <string name="text_level_2">Amateur</string>
+    <string name="text_level_3">Pro</string>
+    <string name="text_level_4">Expert</string>
+    <string name="text_level_5">Master</string>
+</resources>

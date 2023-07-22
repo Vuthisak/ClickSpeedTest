@@ -2,6 +2,7 @@ package com.example.clickspeedtest.util
 
 import android.content.Context
 import com.example.clickspeedtest.R
+import com.example.network.model.Rating
 import com.example.network.model.SelectMode
 import com.example.network.model.enums.SelectModeType
 
@@ -16,6 +17,10 @@ object GeneralUtils {
             add(SelectMode(SelectModeType.THIRTY_SEC, context.getString(R.string.text_30s)))
             add(SelectMode(SelectModeType.SIXTY_SEC, context.getString(R.string.text_60s)))
         }
+    }
+
+    fun getRating(modeType: SelectModeType, score: Int): Rating {
+        return Rating().init(modeType, score);
     }
 
 }

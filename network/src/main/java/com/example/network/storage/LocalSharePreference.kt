@@ -7,7 +7,7 @@ import com.example.network.model.HighScores
 import com.google.gson.Gson
 
 class LocalSharePreference(
-    private val context: Context
+    context: Context
 ) {
 
     private val sharePreference = context.getSharedPreferences(SHARE_PREFERENCES_KEY, MODE_PRIVATE)

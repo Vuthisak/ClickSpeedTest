@@ -20,8 +20,10 @@ class SelectModeAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val selectMode = items[position]
-        holder.binding.txtMode.text = selectMode.text
-        holder.binding.root.setOnClickListener { listener.onItemClicked(selectMode) }
+        with(holder.binding) {
+            txtMode.text = selectMode.text
+            root.setOnClickListener { listener.onItemClicked(selectMode) }
+        }
     }
 
     override fun getItemCount(): Int = items.size
