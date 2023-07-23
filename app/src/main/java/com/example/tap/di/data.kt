@@ -1,4 +1,4 @@
-package com.example.clickspeedtest.di
+package com.example.tap.di
 
 import com.example.network.api.ApiClient
 import com.example.network.api.ApiService
@@ -11,5 +11,5 @@ import org.koin.dsl.module
 val dataModules = module {
     single { ApiClient.getInstance().create(ApiService::class.java) }
     single { LocalSharePreference(androidContext()) }
-    factory<LocationRepository> { LocationRepositoryImpl(get()) }
+    factory<LocationRepository> { LocationRepositoryImpl(get(), get()) }
 }

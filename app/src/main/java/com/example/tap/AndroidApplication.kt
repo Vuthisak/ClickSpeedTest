@@ -1,8 +1,8 @@
-package com.example.clickspeedtest
+package com.example.tap
 
 import android.app.Application
-import com.example.clickspeedtest.di.dataModules
-import com.example.clickspeedtest.di.viewModels
+import com.example.tap.di.dataModules
+import com.example.tap.di.viewModels
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 

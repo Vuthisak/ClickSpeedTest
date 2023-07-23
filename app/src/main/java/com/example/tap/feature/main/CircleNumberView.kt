@@ -1,4 +1,4 @@
-package com.example.clickspeedtest.feature.main
+package com.example.tap.feature.main
 
 import android.content.Context
 import android.graphics.Canvas

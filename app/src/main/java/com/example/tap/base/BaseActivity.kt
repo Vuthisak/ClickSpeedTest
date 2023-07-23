@@ -1,11 +1,9 @@
-package com.example.clickspeedtest.base
+package com.example.tap.base
 
-import android.app.UiModeManager
 import android.content.res.Configuration
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewbinding.ViewBinding
-
 
 abstract class BaseActivity<T : ViewBinding> : AppCompatActivity() {
 

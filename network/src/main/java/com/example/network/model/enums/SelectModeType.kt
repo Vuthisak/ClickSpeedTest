@@ -1,7 +1,6 @@
 package com.example.network.model.enums
 
 import com.example.network.model.HighScores
-import com.example.network.storage.LocalSharePreference
 
 enum class SelectModeType(val rawValue: Int) {
     ONE_SEC(1),

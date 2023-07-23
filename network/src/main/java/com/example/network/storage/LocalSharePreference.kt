@@ -33,9 +33,47 @@ class LocalSharePreference(
         }
     }
 
+    fun saveCountryName(countryName: String) {
+        if (getCountryName() != null) return
+        try {
+            sharePreference.edit {
+                putString(COUNTRY_NAME, countryName.lowercase())
+            }
+        } catch (ex: Exception) {
+            // ignore
+        }
+    }
+
+    fun getCountryName(): String? {
+        return try {
+            sharePreference.getString(COUNTRY_NAME, null)
+        } catch (ex: Exception) {
+            null
+        }
+    }
+
+    fun setUserAlreadyRateApp() {
+        try {
+            sharePreference.edit {
+                putBoolean(RATE_APP, true)
+            }
+        } catch (ex: Exception) {
+            // ignore
+        }
+    }
+
+    fun isUserAlreadyRateApp(): Boolean =
+        try {
+            sharePreference.getBoolean(RATE_APP, false)
+        } catch (ex: Exception) {
+            false
+        }
+
     companion object {
+        private const val RATE_APP = "RATE_APP"
         private const val SHARE_PREFERENCES_KEY = "CLICK_ME"
         private const val HIGH_SCORES = "HIGH_SCORES"
+        private const val COUNTRY_NAME = "COUNTRY_NAME"
     }
 
 }

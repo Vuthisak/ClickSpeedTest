@@ -1,4 +1,4 @@
-package com.example.clickspeedtest.util
+package com.example.tap.util
 
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.disposables.Disposable

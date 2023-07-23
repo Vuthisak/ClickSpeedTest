@@ -1,10 +1,8 @@
-package com.example.clickspeedtest.feature.start
+package com.example.tap.feature.start
 
-import android.util.Log
-import androidx.annotation.MainThread
-import com.example.clickspeedtest.base.BaseViewModel
-import com.example.clickspeedtest.util.addTo
 import com.example.network.repository.LocationRepository
+import com.example.tap.base.BaseViewModel
+import com.example.tap.util.addTo
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 
@@ -17,9 +15,9 @@ class StartViewModel(
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({
-                Log.d("@@@", it.countryName)
+                // no implementation
             }, {
-                Log.d("@@@", "Error: $it")
+                // no implementation
             }).addTo(composite)
     }
 

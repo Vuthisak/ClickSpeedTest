@@ -1,4 +1,4 @@
-package com.example.clickspeedtest.feature.main
+package com.example.tap.feature.main
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -9,16 +9,18 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.widget.RelativeLayout
-import com.example.clickspeedtest.base.BaseActivity
-import com.example.clickspeedtest.databinding.ActivityMainBinding
-import com.example.clickspeedtest.feature.result.ResultActivity
 import com.example.network.model.enums.SelectModeType
+import com.example.tap.base.BaseActivity
+import com.example.tap.databinding.ActivityMainBinding
+import com.example.tap.feature.result.ResultActivity
 import java.util.Random
 import java.util.Timer
 import java.util.TimerTask
 
 class MainActivity : BaseActivity<ActivityMainBinding>() {
+
     private val handler: Handler = Handler(Looper.getMainLooper())
+
     private var touchCount = 0
     private var millis: Long = 0L
     private var time: Int = 0

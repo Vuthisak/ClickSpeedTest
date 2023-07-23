@@ -1,10 +1,9 @@
-package com.example.clickspeedtest.feature.highscore
+package com.example.tap.feature.highscore
 
 import android.os.Bundle
-import com.example.clickspeedtest.R
-import com.example.clickspeedtest.base.BaseActivity
-import com.example.clickspeedtest.databinding.ActivityHighScoreBinding
+import com.example.tap.base.BaseActivity
 import com.example.network.storage.LocalSharePreference
+import com.example.tap.databinding.ActivityHighScoreBinding
 import org.koin.android.ext.android.inject
 
 class HighScoreActivity : BaseActivity<ActivityHighScoreBinding>() {

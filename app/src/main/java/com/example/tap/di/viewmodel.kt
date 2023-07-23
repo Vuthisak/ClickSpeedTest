@@ -1,6 +1,6 @@
-package com.example.clickspeedtest.di
+package com.example.tap.di
 
-import com.example.clickspeedtest.feature.start.StartViewModel
+import com.example.tap.feature.start.StartViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 

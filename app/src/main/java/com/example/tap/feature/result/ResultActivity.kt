@@ -1,14 +1,14 @@
-package com.example.clickspeedtest.feature.result
+package com.example.tap.feature.result
 
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import com.example.clickspeedtest.R
-import com.example.clickspeedtest.base.BaseActivity
-import com.example.clickspeedtest.databinding.ActivityResultBinding
-import com.example.clickspeedtest.feature.main.MainActivity
-import com.example.clickspeedtest.feature.start.StartActivity
-import com.example.clickspeedtest.util.GeneralUtils
+import com.example.tap.R
+import com.example.tap.base.BaseActivity
+import com.example.tap.databinding.ActivityResultBinding
+import com.example.tap.feature.main.MainActivity
+import com.example.tap.feature.start.StartActivity
+import com.example.tap.util.GeneralUtils
 import com.example.network.model.HighScores
 import com.example.network.model.enums.SelectModeType
 import com.example.network.storage.LocalSharePreference

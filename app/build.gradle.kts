@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.clickspeedtest"
+    namespace = "com.example.tap"
     compileSdk = 33
 
     defaultConfig {
-        applicationId = "com.example.clickspeedtest"
+        applicationId = "com.example.tap"
         minSdk = 24
         targetSdk = 33
         versionCode = 1
