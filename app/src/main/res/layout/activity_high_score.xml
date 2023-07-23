@@ -14,90 +14,23 @@
         android:text="@string/text_high_scores"
         android:textAllCaps="true"
         android:textSize="@dimen/sp_24"
-        app:layout_constraintBottom_toTopOf="@id/viewDivider"
+        app:layout_constraintBottom_toTopOf="@id/txtHighscore60s"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed" />
 
-    <View
-        android:id="@+id/viewDivider"
-        android:layout_width="@dimen/dp_4"
-        android:layout_height="@dimen/dp_160"
-        android:layout_marginTop="@dimen/dp_16"
-        android:background="@color/title_color"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@id/txtHighscores"
-        app:layout_constraintStart_toStartOf="@id/txtHighscores"
-        app:layout_constraintTop_toBottomOf="@id/txtHighscores" />
-
-    <TextView
-        android:id="@+id/txtHighscore1s"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/text_1s_format"
-        android:textColor="@color/title_color"
-        android:textSize="@dimen/sp_24"
-        app:layout_constraintEnd_toStartOf="@id/viewDivider"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/viewDivider" />
-
-    <TextView
-        android:id="@+id/txtHighscore3s"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/text_3s_format"
-        android:textColor="@color/title_color"
-        android:textSize="@dimen/sp_24"
-        app:layout_constraintBottom_toTopOf="@id/txtHighscore5s"
-        app:layout_constraintEnd_toStartOf="@id/viewDivider"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/txtHighscore1s" />
-
-    <TextView
-        android:id="@+id/txtHighscore5s"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/text_5s_format"
-        android:textColor="@color/title_color"
-        android:textSize="@dimen/sp_24"
-        app:layout_constraintBottom_toBottomOf="@id/viewDivider"
-        app:layout_constraintEnd_toStartOf="@id/viewDivider"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/txtHighscore10s"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/text_10s_format"
-        android:textColor="@color/title_color"
-        android:textSize="@dimen/sp_24"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/viewDivider"
-        app:layout_constraintTop_toTopOf="@id/viewDivider" />
-
-    <TextView
-        android:id="@+id/txtHighscore30s"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/text_30s_format"
-        android:textColor="@color/title_color"
-        android:textSize="@dimen/sp_24"
-        app:layout_constraintBottom_toBottomOf="@id/txtHighscore60s"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/viewDivider"
-        app:layout_constraintTop_toTopOf="@id/txtHighscore10s" />
-
     <TextView
         android:id="@+id/txtHighscore60s"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/text_60s_format"
         android:textColor="@color/title_color"
         android:textSize="@dimen/sp_24"
-        app:layout_constraintBottom_toBottomOf="@id/viewDivider"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/viewDivider" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtHighscores"
+        tools:text="@string/text_60s_format" />
 
     <!--    <TextView-->
     <!--        android:id="@+id/txtLast5AverageCps"-->

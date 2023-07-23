@@ -6,47 +6,28 @@
     android:layout_height="match_parent"
     tools:context=".feature.main.MainActivity">
 
-    <TextView
-        android:id="@+id/txtCurrentCps"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/dp_4"
-        android:text="@string/text_zero"
-        app:layout_constraintBottom_toTopOf="@id/txtCurrentCpsLabel"
-        app:layout_constraintEnd_toEndOf="@id/txtCurrentCpsLabel"
-        app:layout_constraintStart_toStartOf="@id/txtCurrentCpsLabel" />
-
-    <TextView
-        android:id="@+id/txtCurrentCpsLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dp_16"
-        android:layout_marginTop="@dimen/dp_54"
-        android:text="@string/text_current_cps"
-        android:textAllCaps="true"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <com.google.android.material.progressindicator.LinearProgressIndicator
         android:id="@+id/progressTimeLeft"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/dp_80"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="@dimen/dp_8"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
         android:progress="0"
         app:layout_constraintBottom_toTopOf="@id/txtTimeLeftLabel"
-        app:layout_constraintEnd_toEndOf="@id/txtTimeLeftLabel"
-        app:layout_constraintStart_toStartOf="@id/txtTimeLeftLabel" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txtTimeLeftLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_54"
-        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_4"
         android:text="@string/text_time_left"
         android:textAllCaps="true"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="@id/progressTimeLeft"
+        app:layout_constraintStart_toStartOf="@id/progressTimeLeft"
+        app:layout_constraintTop_toBottomOf="@id/progressTimeLeft" />
+
 
     <TextView
         android:id="@+id/txtCurrentPoint"
@@ -55,6 +36,15 @@
         android:text="@string/text_go"
         android:textColor="@color/title_color"
         android:textSize="@dimen/sp_32"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/circleContainer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

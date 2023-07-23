@@ -8,7 +8,9 @@ import androidx.appcompat.app.AppCompatDelegate
 import com.example.clickspeedtest.base.BaseActivity
 import com.example.clickspeedtest.databinding.ActivityStartBinding
 import com.example.clickspeedtest.feature.highscore.HighScoreActivity
+import com.example.clickspeedtest.feature.main.MainActivity
 import com.example.clickspeedtest.feature.selectmode.SelectModeActivity
+import com.example.network.model.enums.SelectModeType
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class StartActivity : BaseActivity<ActivityStartBinding>() {
@@ -26,13 +28,10 @@ class StartActivity : BaseActivity<ActivityStartBinding>() {
     }
 
     private fun setListener() = with(binding) {
-        root.setOnClickListener { gotoSelectModeScreen() }
+        root.setOnClickListener {
+            MainActivity.start(this@StartActivity, SelectModeType.SIXTY_SEC.rawValue)
+        }
         imgBarChart.setOnClickListener { gotoHighScoreScreen() }
-    }
-
-    private fun gotoSelectModeScreen() {
-        val intent = Intent(this, SelectModeActivity::class.java)
-        startActivity(intent)
     }
 
     private fun gotoHighScoreScreen() {

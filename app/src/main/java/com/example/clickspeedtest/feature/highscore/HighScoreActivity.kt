@@ -20,12 +20,7 @@ class HighScoreActivity : BaseActivity<ActivityHighScoreBinding>() {
 
     private fun setupContent() = with(binding) {
         localStorage.getHighScores().let {
-            txtHighscore1s.text = getString(R.string.text_1s_format, it.oneSec)
-            txtHighscore3s.text = getString(R.string.text_3s_format, it.threeSec)
-            txtHighscore5s.text = getString(R.string.text_5s_format, it.fiveSec)
-            txtHighscore10s.text = getString(R.string.text_10s_format, it.tenSec)
-            txtHighscore30s.text = getString(R.string.text_30s_format, it.thirtySec)
-            txtHighscore60s.text = getString(R.string.text_60s_format, it.sixtySec)
+            txtHighscore60s.text = it.sixtySec.toString()
         }
     }
 
