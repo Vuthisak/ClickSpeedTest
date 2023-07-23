@@ -22,6 +22,7 @@ class RateAppActivity : BaseActivity<ActivityRateAppBinding>() {
         binding.imgClose.setOnClickListener { finish() }
         binding.btnRateUs.setOnClickListener {
             localStorage.setUserAlreadyRateApp()
+            finish()
             // TODO to implement
         }
     }
