@@ -1,4 +1,4 @@
-package com.example.tap.feature
+package com.example.tap.feature.rateapp
 
 import android.content.Context
 import android.content.Intent

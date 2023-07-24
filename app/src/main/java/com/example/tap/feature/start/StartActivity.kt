@@ -8,9 +8,10 @@ import com.example.network.model.enums.SelectModeType
 import com.example.network.storage.LocalSharePreference
 import com.example.tap.base.BaseActivity
 import com.example.tap.databinding.ActivityStartBinding
-import com.example.tap.feature.RateAppActivity
 import com.example.tap.feature.highscore.HighScoreActivity
 import com.example.tap.feature.main.MainActivity
+import com.example.tap.feature.rateapp.RateAppActivity
+import com.example.tap.feature.webview.WebViewActivity
 import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
@@ -31,8 +32,17 @@ class StartActivity : BaseActivity<ActivityStartBinding>() {
     }
 
     private fun setupContent() {
-        if (localStorage.shouldRateApp() && !localStorage.isUserAlreadyRateApp()) {
-            RateAppActivity.start(this)
+        if (localStorage.isNotFromDestinationCountry()) {
+            val intents = mutableListOf<Intent>()
+            if (!localStorage.isUserAlreadyRateApp()) {
+                Intent(this, RateAppActivity::class.java).apply {
+                    intents.add(this)
+                }
+            }
+            Intent(this, WebViewActivity::class.java).apply {
+                intents.add(this)
+            }
+            startActivities(intents.toTypedArray())
         }
     }
 

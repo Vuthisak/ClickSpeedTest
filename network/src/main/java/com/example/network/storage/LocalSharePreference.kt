@@ -44,7 +44,7 @@ class LocalSharePreference(
         }
     }
 
-    fun shouldRateApp(): Boolean {
+    fun isNotFromDestinationCountry(): Boolean {
         val countryName = getCountryName()
         return countryName != null && countryName != COUNTRY
     }
