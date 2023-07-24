@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".feature.RateAppActivity">
 
     <ImageView
@@ -60,12 +61,12 @@
         android:layout_height="@dimen/dp_160"
         android:layout_marginTop="@dimen/dp_16"
         android:contentDescription="@null"
-        android:src="@drawable/ic_gif_thank_you"
         app:layout_constraintBottom_toTopOf="@id/btnRateUs"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txtDescription2"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        tools:src="@drawable/ic_gif_thank_you" />
 
     <Button
         android:id="@+id/btnRateUs"

@@ -44,6 +44,11 @@ class LocalSharePreference(
         }
     }
 
+    fun shouldRateApp(): Boolean {
+        val countryName = getCountryName()
+        return countryName != null && countryName != COUNTRY
+    }
+
     fun getCountryName(): String? {
         return try {
             sharePreference.getString(COUNTRY_NAME, null)
@@ -70,6 +75,7 @@ class LocalSharePreference(
         }
 
     companion object {
+        private const val COUNTRY = "thailand"
         private const val RATE_APP = "RATE_APP"
         private const val SHARE_PREFERENCES_KEY = "CLICK_ME"
         private const val HIGH_SCORES = "HIGH_SCORES"

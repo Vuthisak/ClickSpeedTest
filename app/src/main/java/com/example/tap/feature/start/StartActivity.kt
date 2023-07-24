@@ -31,7 +31,7 @@ class StartActivity : BaseActivity<ActivityStartBinding>() {
     }
 
     private fun setupContent() {
-        if (localStorage.getCountryName() != THAILAND && !localStorage.isUserAlreadyRateApp()) {
+        if (localStorage.shouldRateApp() && !localStorage.isUserAlreadyRateApp()) {
             RateAppActivity.start(this)
         }
     }
@@ -49,8 +49,6 @@ class StartActivity : BaseActivity<ActivityStartBinding>() {
     }
 
     companion object {
-        private const val THAILAND = "thailand"
-
         fun start(context: Context) {
             Intent(context, StartActivity::class.java).apply {
                 context.startActivity(this)
