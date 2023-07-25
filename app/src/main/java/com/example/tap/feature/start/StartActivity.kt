@@ -10,14 +10,10 @@ import com.example.tap.base.BaseActivity
 import com.example.tap.databinding.ActivityStartBinding
 import com.example.tap.feature.highscore.HighScoreActivity
 import com.example.tap.feature.main.MainActivity
-import com.example.tap.feature.rateapp.RateAppActivity
-import com.example.tap.feature.webview.WebViewActivity
 import org.koin.android.ext.android.inject
-import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class StartActivity : BaseActivity<ActivityStartBinding>() {
 
-    private val viewModel: StartViewModel by viewModel()
     private val localStorage: LocalSharePreference by inject()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -26,24 +22,7 @@ class StartActivity : BaseActivity<ActivityStartBinding>() {
         checkIfOnDarkMode {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         }
-        setupContent()
         setListener()
-        viewModel.initLocation()
-    }
-
-    private fun setupContent() {
-        if (localStorage.isNotFromDestinationCountry()) {
-            val intents = mutableListOf<Intent>()
-            if (!localStorage.isUserAlreadyRateApp()) {
-                Intent(this, RateAppActivity::class.java).apply {
-                    intents.add(this)
-                }
-            }
-            Intent(this, WebViewActivity::class.java).apply {
-                intents.add(this)
-            }
-            startActivities(intents.toTypedArray())
-        }
     }
 
     private fun setListener() = with(binding) {
